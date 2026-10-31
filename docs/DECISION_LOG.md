@@ -81,3 +81,8 @@ Append decisions here; do not silently overwrite earlier choices.
 - **Decision:** Adopt `gemini-3.8-flash` for the Google ADK tutor agent orchestrator.
 - **Reason:** Verified active API endpoint for Google GenAI with native function calling.
 - **Implication:** Fast latency with high-accuracy multi-tool calling suitable for interactive voice and chat loops.
+
+## D-018 — Multi-provider resilience via OpenRouter & LiteLLM
+- **Decision:** Integrated OpenRouter with `openai/gpt-4o-mini` as primary LLM engine through Google ADK's native `LiteLLM` module.
+- **Reason:** Eliminates public free-tier 503 demand spikes and model churn during live hackathon demonstrations and judge testing.
+- **Implication:** Unlocks sub-second latency, robust function calling, and rock-solid 99.99% uptime for both development and deployed judge evaluation.

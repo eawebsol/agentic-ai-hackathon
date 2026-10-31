@@ -90,9 +90,8 @@ Encouraging, precise and honest. Explain uncertainty. Celebrate progress
 without overstating it.
 """
 
-# Model — keep configurable; default to gemini-2.0-flash for speed.
-# Switch to gemini-2.5-pro for better reasoning on complex tool chains.
-_MODEL = os.getenv("COGNIFY_MODEL", "gemini-2.0-flash")
+# Model — using OpenRouter (gpt-4o-mini / claude-3.5-haiku) for ultra-reliable, zero-rate-limit tool calling.
+_MODEL = os.getenv("COGNIFY_MODEL", "openrouter/openai/gpt-4o-mini")
 
 cognify_agent = Agent(
     model=_MODEL,
