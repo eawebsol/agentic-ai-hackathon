@@ -11,6 +11,12 @@ load_dotenv(PROJECT_ROOT / "infrastructure" / "postgres" / ".env")
 
 
 def get_connection():
+    # 1. Direct cloud connection string (e.g. Neon, Supabase, Streamlit secrets)
+    db_url = os.environ.get("DATABASE_URL")
+    if db_url:
+        return psycopg.connect(db_url, row_factory=dict_row)
+
+    # 2. Local environment variables
     password = os.environ.get("POSTGRES_PASSWORD")
 
     if not password:
