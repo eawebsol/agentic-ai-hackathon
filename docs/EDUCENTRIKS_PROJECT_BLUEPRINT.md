@@ -1,4 +1,4 @@
-# Educentriks — Agentic AI Hackathon Project Blueprint
+# Educentriks Cognify — Agentic AI Hackathon Project Blueprint
 
 _Last updated: 31 October 2026_
 
@@ -6,7 +6,7 @@ _Last updated: 31 October 2026_
 
 ## 1. Product direction
 
-Educentriks is a **voice-first adaptive certification learning coach**. A learner explains their background and goal; Educentriks diagnoses their current ability, creates a personalised learning plan, teaches using grounded sources, assesses practical understanding, updates a learner model and recommends the next activity.
+Educentriks Cognify, a product by Educentriks, is a **voice-first adaptive certification learning coach**. A learner explains their background and goal; Cognify diagnoses their current ability, creates a personalised learning plan, teaches using grounded sources, assesses practical understanding, updates a learner model and recommends the next activity.
 
 ### Initial audience
 - Aspiring AI engineers and career switchers.
@@ -66,9 +66,9 @@ The event's Wispr Flow requirement, judging weights, deadline and submission rul
 ## 4. Primary demo journey
 
 1. Learner speaks: “I’m a Python developer. I know APIs, but I’m new to AI agents. I want to prepare for AI-103.”
-2. Educentriks extracts profile details and asks only necessary follow-ups.
+2. Educentriks Cognify extracts profile details and asks only necessary follow-ups.
 3. Learner completes a short diagnostic.
-4. Educentriks identifies gaps and creates a tailored plan.
+4. Educentriks Cognify identifies gaps and creates a tailored plan.
 5. Learner asks a voice question about RAG, tools or agent orchestration.
 6. Tutor retrieves relevant Microsoft learning material and answers with sources.
 7. Learner completes an original scenario question or mini-exercise.
@@ -118,7 +118,7 @@ Browser — Next.js / React / TypeScript
 | Backend hosting | Google Cloud Run | Scale-to-zero where appropriate; monitor cost |
 | Source control | GitHub | Existing private repo |
 
-Microsoft is the certification/content ecosystem; Educentriks does not need to be hosted on Azure. Do not add cloud services solely for branding.
+Microsoft is the certification/content ecosystem; Educentriks Cognify does not need to be hosted on Azure. Do not add cloud services solely for branding.
 
 ### Architecture guardrails
 - Never commit `.env`, API keys, passwords or tokens.
@@ -153,7 +153,7 @@ Start with one root tutor agent and narrowly scoped tools.
 - Ask clarifying questions only when needed.
 - Confirm ambiguous, consequential profile changes.
 - Cite retrieved sources for certification explanations.
-- Distinguish official material from Educentriks explanations and practice.
+- Distinguish official material from Educentriks Cognify explanations and practice.
 - Never claim generated questions are actual Microsoft exam questions.
 - Never guarantee exam success.
 - Disclose when retrieval lacks reliable evidence.
@@ -403,7 +403,7 @@ Previously completed and verified; do not repeat unless something has changed:
 4. Verify the current AI-103 blueprint and define the initial concept graph.
 5. Design the learner-model data before implementing the backend vertical slice.
 
-**Current checkpoint:** development environment, GitHub foundation and project documentation are ready. PS02 requirements are recorded in Section 17. Educentriks application features remain unbuilt and must be verified as they are implemented.
+**Current checkpoint:** development environment, GitHub foundation and project documentation are ready. PS02 requirements are recorded in Section 17. Educentriks Cognify application features remain unbuilt and must be verified as they are implemented.
 
 
 ## 17. Hackathon problem statement alignment — PS02
