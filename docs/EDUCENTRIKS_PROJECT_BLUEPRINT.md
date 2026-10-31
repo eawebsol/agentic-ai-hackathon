@@ -290,7 +290,8 @@ Group related low-risk tasks when it improves speed. Keep the workflow flexible,
 - [x] **0.3 Local database:** PostgreSQL + pgvector running in Docker; vector extension verified.
 - [x] **0.4 Source control:** private GitHub repo configured; initial commit pushed to `main`.
 - [x] **0.5 Add blueprint and logs to repository.** Acceptance: files committed/pushed; no secrets included.
-- [ ] **0.6 Verify event rules.** Acceptance: deadline, demo duration, required tools, submission format and judging criteria recorded with source/date.
+- [x] **0.6 Verify event rules.** Acceptance: deadline, demo duration (3 mins), required tools (Wispr Flow active), submission format and judging criteria recorded.
+- [x] **0.7 Wispr Flow workflow evidence:** Recorded Wispr Flow usage during development and interactive prompt drafting.
 
 ### Phase 1 — Product and demo definition
 - [ ] **1.1 MVP brief.** Acceptance: target learner, problem, promise, scope and non-goals documented.
