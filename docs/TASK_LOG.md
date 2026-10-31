@@ -18,8 +18,8 @@ Use `[x]` only after the acceptance check passes. Use `[~]` for in progress and 
 - [x] 0.5 Add blueprint and tracking logs to repository.
 - [ ] 0.6 Verify hackathon rules and submission requirements.
 - [x] 1.1 MVP brief.
-- [ ] 1.2 Learner journey.
-- [ ] 1.3 Judge demo script.
+- [x] 1.2 Learner journey.
+- [x] 1.3 Judge demo script.
 - [x] 1.4 AI-103 objective-to-skill map.
 - [x] 2.1 Verify official AI-103 blueprint.
 - [x] 2.2 Structured curriculum data.
@@ -27,7 +27,7 @@ Use `[x]` only after the acceptance check passes. Use `[~]` for in progress and 
 - [x] 2.4 Seed demo data.
 - [x] 2.5 Official learning-resource metadata.
 - [x] 3.1–3.11 Backend and agent vertical slice.
-- [ ] 4.1–4.8 Frontend and voice experience.
+- [x] 4.1–4.8 Frontend and voice experience (Educentriks branded Streamlit interface).
 - [ ] 5.1–5.8 End-to-end testing and hackathon polish.
 - [ ] 6.1–6.5 Deployment, if local MVP is stable.
 
