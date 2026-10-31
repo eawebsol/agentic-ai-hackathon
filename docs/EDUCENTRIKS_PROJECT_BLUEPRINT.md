@@ -397,10 +397,91 @@ Previously completed and verified; do not repeat unless something has changed:
 
 ## 16. Immediate next actions
 
-1. Add this blueprint, `TASK_LOG.md` and `DECISION_LOG.md` to the repository.
-2. Verify current hackathon requirements and submission deadline.
-3. Create the one-page MVP brief and judge demo script.
-4. Verify the current AI-103 blueprint and build the objective-to-skill map.
-5. Start the backend vertical slice after the curriculum shape is agreed.
+1. Verify current hackathon requirements and submission rules (Task 0.6).
+2. Create the one-page MVP brief and learner journey.
+3. Prepare the judge demo script, including the adaptive-learning behaviour.
+4. Verify the current AI-103 blueprint and define the initial concept graph.
+5. Design the learner-model data before implementing the backend vertical slice.
 
-**Current checkpoint:** development environment and GitHub foundation are ready. Educentriks application features are not yet complete. Focus next on a small, working hackathon journey.
+**Current checkpoint:** development environment, GitHub foundation and project documentation are ready. PS02 requirements are recorded in Section 17. Educentriks application features remain unbuilt and must be verified as they are implemented.
+
+
+## 17. Hackathon problem statement alignment — PS02
+
+**Target problem:** Adaptive exam-prep tutor with a learner model.
+
+This section extends the existing MVP. It does not replace the single-agent modular-monolith architecture or expand the initial certification scope beyond AI-103.
+
+### Required adaptive-learning capabilities
+
+1. **Concept graph:** Represent examinable concepts as nodes, with explicit prerequisite relationships. Map official exam objectives to relevant concepts. Do not assume every objective is a single concept.
+2. **Evidence-based learner model:** Track mastery by concept, assessment evidence, confidence and last assessment date. Correctness alone is insufficient to diagnose understanding.
+3. **Misconception detection:** Analyse the learner's explanation or reasoning to identify likely misconceptions. Store the supporting response evidence and confidence; allow uncertain diagnoses to remain unconfirmed.
+4. **Adaptive difficulty:** Select subsequent original practice questions using current concept mastery, prerequisite readiness and recent performance. Make difficulty changes explainable and testable.
+5. **Spaced repetition:** Schedule review activities for concepts that need reinforcement. Use a simple, deterministic scheduling policy for the MVP; record the next review date and completion outcome.
+6. **Teacher/cohort insights:** Provide a minimal aggregated view of class-level concept gaps and recurring misconceptions. Do not expose one learner's private responses to other learners.
+
+### Updated MVP acceptance criteria
+
+The original MVP definition of done is extended to require:
+- [ ] A concept graph with prerequisite relationships for the selected AI-103 scope.
+- [ ] A learner model that records concept-level evidence and mastery.
+- [ ] At least one demonstrated misconception identified from reasoning, not merely an incorrect answer.
+- [ ] A subsequent question whose difficulty adapts to learner evidence.
+- [ ] A review activity scheduled for a future date and reflected in the learner's plan.
+- [ ] A minimal teacher/cohort view showing aggregated learning gaps.
+
+### Extended demo journey
+
+After the existing diagnostic and tutor interaction:
+
+1. Learner answers an original scenario question and explains their reasoning.
+2. The tutor identifies a possible misconception and shows the evidence behind that diagnosis.
+3. The learner model updates the relevant concept's evidence and mastery.
+4. The next practice question adapts its difficulty.
+5. A weak concept receives a scheduled review activity.
+6. The learner dashboard reflects the updated state.
+7. A teacher view displays aggregated cohort gaps without exposing individual private responses.
+
+### Architecture and tool extensions
+
+Keep the existing single ADK tutor orchestrator. Add narrowly scoped capabilities:
+- `detect_misconceptions`: identify possible misconceptions from response reasoning and return evidence and confidence.
+- `adapt_question_difficulty`: select a difficulty using learner evidence and prerequisite readiness.
+- `schedule_review`: create or update a spaced-repetition activity.
+- `get_teacher_dashboard`: return privacy-preserving cohort aggregates.
+
+Extend `update_mastery` to support concept-level evidence. Keep scoring, mastery transitions and review scheduling deterministic where practical; use the LLM for interpretation and explanation, not as the sole authority for state transitions.
+
+### Data-model extensions
+
+Add these logical entities when implementing the relevant vertical slice:
+- `concepts`: concept identifiers, descriptions and curriculum mapping.
+- `concept_prerequisites`: prerequisite-to-dependent-concept relationships.
+- `objective_concepts`: mapping between official objectives and concepts.
+- `learner_misconceptions`: learner, concept, diagnosis, evidence reference, confidence and status.
+- `review_schedules`: learner, concept, due date, interval and completion state.
+- `cohorts` and `cohort_memberships`: minimal teacher/class grouping.
+
+Extend mastery records to support concept-level evidence. Avoid duplicating official exam weightings in learner mastery records.
+
+### Additional implementation tasks
+
+- **0.7 Wispr Flow workflow evidence:** Record how Wispr Flow is used during development and capture evidence for the submission. The user has confirmed that they have started using it; organiser-specific compliance still needs verification.
+- **1.5 Concept graph:** Define the initial AI-103 concept nodes and prerequisite edges.
+- **2.6 Learner-model data design:** Define concept mastery, misconception evidence and review scheduling.
+- **3.12 Adaptive learner model:** Implement misconception analysis and evidence-based concept updates.
+- **3.13 Adaptive practice and spaced repetition:** Implement difficulty selection and review scheduling.
+- **3.14 Teacher insights API:** Return aggregated cohort gaps and recurring misconceptions.
+- **4.9 Teacher/cohort dashboard:** Display the minimal aggregated insights.
+- **5.9 Adaptive behaviour verification:** Test misconception evidence, difficulty changes, review scheduling and cohort privacy.
+
+### Scope and implementation safeguards
+
+- Keep AI-103 as the initial certification target; verify its current official objectives before creating curriculum data.
+- Do not claim a misconception is certain when evidence is weak.
+- Do not update mastery solely because an answer is right or wrong.
+- Do not present generated practice questions as actual exam questions.
+- Keep cohort reporting aggregated and protect individual learner data.
+- Prefer a small, demonstrable implementation over a complex general-purpose adaptive-learning engine.
+- Treat Wispr Flow usage, judging criteria and submission compliance as separate items to verify against current organiser instructions.

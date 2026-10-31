@@ -46,9 +46,24 @@ Use `[x]` only after the acceptance check passes. Use `[~]` for in progress and 
 - Commit:
 ```
 
-## Current checkpoint
-**Completed:** local development foundation and GitHub repository setup.
 
-**Next:** add project documents to the repository, verify hackathon requirements and prepare the MVP brief/demo journey.
+
+## Hackathon PS02 additions
+
+- [ ] 0.7 Record actual Wispr Flow development workflow and submission evidence.
+- [ ] 1.5 Define the initial AI-103 concept graph and prerequisite relationships.
+- [ ] 2.6 Design concept-level learner mastery, misconception evidence and review scheduling.
+- [ ] 3.12 Implement misconception analysis and evidence-based learner-model updates.
+- [ ] 3.13 Implement adaptive question difficulty and spaced-repetition scheduling.
+- [ ] 3.14 Implement privacy-preserving teacher/cohort insights API.
+- [ ] 4.9 Build the minimal teacher/cohort dashboard.
+- [ ] 5.9 Verify adaptive behaviour, evidence quality and cohort privacy.
+
+## Current checkpoint
+**Completed:** local development foundation, GitHub repository setup and project documentation commit (Phase 0.5).
+
+**Confirmed:** Wispr Flow usage has started. Exact organiser compliance and submission requirements remain to be verified.
+
+**Next:** verify hackathon requirements (0.6), then complete the MVP brief, learner journey, judge demo script and initial concept graph.
 
 The environment being ready does not mean the Educentriks application is built. Product tasks remain pending until tested.

@@ -50,3 +50,29 @@ Append decisions here; do not silently overwrite earlier choices.
 
 ## D-010 — Progress records
 - **Decision:** Maintain a master blueprint, separate task log and separate decision log.
+
+
+## D-011 — Hackathon problem statement
+- **Decision:** Target the second problem statement, adaptive exam-prep tutor with a learner model (PS02).
+- **Implication:** Make adaptive learning behaviour demonstrable, not just a conversational tutor.
+
+## D-012 — Concept graph
+- **Decision:** Represent the initial curriculum using concepts and explicit prerequisite relationships, mapped to official exam objectives.
+- **Implication:** Diagnostic results and learning recommendations can account for prerequisite gaps.
+
+## D-013 — Evidence-based learner model
+- **Decision:** Track concept mastery using assessment evidence and misconception analysis, not correctness alone.
+- **Implication:** Store supporting evidence and confidence; uncertain diagnoses must remain uncertain.
+
+## D-014 — Adaptive difficulty and spaced repetition
+- **Decision:** Adapt subsequent original practice-question difficulty and schedule reviews using learner evidence.
+- **Implication:** Keep MVP policies simple, explainable and testable.
+
+## D-015 — Minimal teacher/cohort insights
+- **Decision:** Include a minimal teacher view of aggregated concept gaps and recurring misconceptions.
+- **Implication:** Protect individual learner responses and avoid building a full classroom-management product.
+
+## D-016 — Wispr Flow workflow
+- **Decision:** Treat Wispr Flow usage and its evidence as an explicit hackathon workstream.
+- **Evidence:** The user has confirmed they have started using Wispr Flow.
+- **Implication:** Record actual workflow usage and verify the organiser's exact requirement before claiming compliance.
