@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 
 from api.routes.learners import router as learners_router
+from api.routes.tutor import router as tutor_router
 
 app = FastAPI(
     title="Educentriks Cognify API",
@@ -26,3 +27,4 @@ async def health():
 
 
 app.include_router(learners_router)
+app.include_router(tutor_router)
