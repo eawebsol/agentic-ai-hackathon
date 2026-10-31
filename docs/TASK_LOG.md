@@ -28,7 +28,7 @@ Use `[x]` only after the acceptance check passes. Use `[~]` for in progress and 
 - [x] 2.5 Official learning-resource metadata.
 - [x] 3.1–3.11 Backend and agent vertical slice.
 - [x] 4.1–4.8 Frontend and voice experience (Educentriks branded Streamlit interface).
-- [ ] 5.1–5.8 End-to-end testing and hackathon polish.
+- [x] 5.1–5.8 End-to-end testing and hackathon polish (Dual-engine Google AI Pro & OpenRouter verified).
 - [ ] 6.1–6.5 Deployment, if local MVP is stable.
 
 ## Task evidence template
@@ -58,8 +58,13 @@ Use `[x]` only after the acceptance check passes. Use `[~]` for in progress and 
 - [x] 5.9 Verify adaptive behaviour, evidence quality and cohort privacy.
 
 ## Current checkpoint
-**Completed:** Phase 0, Phase 1.1, Phase 2 (full schema, curriculum, concept graph & seed data), and Phase 3 (Cognify ADK tutor agent with all 14 tools, Gemini 3.8 Flash live integration tested & verified).
+**Completed:** 
+- Phase 0 (Setup, Wispr Flow evidence, blueprint).
+- Phase 1 & 2 (AI-103 certification objectives, 7-concept prerequisite graph, PostgreSQL 17 schema with 22 tables, seed learners & resources).
+- Phase 3 (Google ADK Cognify tutor agent with all 10 tools, grounded RAG, 4-part mathematical rubric scoring, misconception diagnosis).
+- Phase 4 (Streamlit UI with Educentriks brand design, browser-native speech recognition with toggle state, live knowledge graph, cohort gap analytics).
+- Phase 5 (Dual-engine verified: Google AI Pro Gemini 2.5 Flash / 1.5 Pro + OpenRouter backup; all 10 agent tools passing tests against PostgreSQL).
 
-**Confirmed:** Live Google ADK Agent tool execution with Gemini 3.8 Flash working against local PostgreSQL database.
+**Confirmed:** Live Google ADK Agent tool execution with Google AI Pro Gemini and local PostgreSQL database.
 
-**Next:** Phase 4 — Frontend UI (Interactive learner voice/chat coaching experience + teacher dashboard).
+**Next:** Phase 5/6 — Run autonomous demo video recording (`record_demo.py`), sync repository, and prepare final submission package.
