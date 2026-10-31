@@ -289,7 +289,7 @@ Group related low-risk tasks when it improves speed. Keep the workflow flexible,
 - [x] **0.2 Agent framework:** Google ADK installed; starter agent generated.
 - [x] **0.3 Local database:** PostgreSQL + pgvector running in Docker; vector extension verified.
 - [x] **0.4 Source control:** private GitHub repo configured; initial commit pushed to `main`.
-- [ ] **0.5 Add blueprint and logs to repository.** Acceptance: files committed/pushed; no secrets included.
+- [x] **0.5 Add blueprint and logs to repository.** Acceptance: files committed/pushed; no secrets included.
 - [ ] **0.6 Verify event rules.** Acceptance: deadline, demo duration, required tools, submission format and judging criteria recorded with source/date.
 
 ### Phase 1 — Product and demo definition

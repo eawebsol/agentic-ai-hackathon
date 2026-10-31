@@ -15,7 +15,7 @@ Use `[x]` only after the acceptance check passes. Use `[~]` for in progress and 
 - [x] Git ignore rules protect local environment files and secrets.
 
 ## Active checklist
-- [ ] 0.5 Add blueprint and tracking logs to repository.
+- [x] 0.5 Add blueprint and tracking logs to repository.
 - [ ] 0.6 Verify hackathon rules and submission requirements.
 - [ ] 1.1 MVP brief.
 - [ ] 1.2 Learner journey.
