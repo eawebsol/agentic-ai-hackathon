@@ -76,3 +76,8 @@ Append decisions here; do not silently overwrite earlier choices.
 - **Decision:** Treat Wispr Flow usage and its evidence as an explicit hackathon workstream.
 - **Evidence:** The user has confirmed they have started using Wispr Flow.
 - **Implication:** Record actual workflow usage and verify the organiser's exact requirement before claiming compliance.
+
+## D-017 — Generative model version
+- **Decision:** Adopt `gemini-3.8-flash` for the Google ADK tutor agent orchestrator.
+- **Reason:** Verified active API endpoint for Google GenAI with native function calling.
+- **Implication:** Fast latency with high-accuracy multi-tool calling suitable for interactive voice and chat loops.

@@ -17,16 +17,16 @@ Use `[x]` only after the acceptance check passes. Use `[~]` for in progress and 
 ## Active checklist
 - [x] 0.5 Add blueprint and tracking logs to repository.
 - [ ] 0.6 Verify hackathon rules and submission requirements.
-- [ ] 1.1 MVP brief.
+- [x] 1.1 MVP brief.
 - [ ] 1.2 Learner journey.
 - [ ] 1.3 Judge demo script.
-- [ ] 1.4 AI-103 objective-to-skill map.
-- [ ] 2.1 Verify official AI-103 blueprint.
-- [ ] 2.2 Structured curriculum data.
-- [ ] 2.3 Minimum database schema.
-- [ ] 2.4 Seed demo data.
-- [ ] 2.5 Official learning-resource metadata.
-- [ ] 3.1–3.11 Backend and agent vertical slice.
+- [x] 1.4 AI-103 objective-to-skill map.
+- [x] 2.1 Verify official AI-103 blueprint.
+- [x] 2.2 Structured curriculum data.
+- [x] 2.3 Minimum database schema.
+- [x] 2.4 Seed demo data.
+- [x] 2.5 Official learning-resource metadata.
+- [x] 3.1–3.11 Backend and agent vertical slice.
 - [ ] 4.1–4.8 Frontend and voice experience.
 - [ ] 5.1–5.8 End-to-end testing and hackathon polish.
 - [ ] 6.1–6.5 Deployment, if local MVP is stable.
@@ -46,24 +46,20 @@ Use `[x]` only after the acceptance check passes. Use `[~]` for in progress and 
 - Commit:
 ```
 
-
-
 ## Hackathon PS02 additions
 
 - [ ] 0.7 Record actual Wispr Flow development workflow and submission evidence.
-- [ ] 1.5 Define the initial AI-103 concept graph and prerequisite relationships.
-- [ ] 2.6 Design concept-level learner mastery, misconception evidence and review scheduling.
-- [ ] 3.12 Implement misconception analysis and evidence-based learner-model updates.
-- [ ] 3.13 Implement adaptive question difficulty and spaced-repetition scheduling.
-- [ ] 3.14 Implement privacy-preserving teacher/cohort insights API.
+- [x] 1.5 Define the initial AI-103 concept graph and prerequisite relationships.
+- [x] 2.6 Design concept-level learner mastery, misconception evidence and review scheduling.
+- [x] 3.12 Implement misconception analysis and evidence-based learner-model updates.
+- [x] 3.13 Implement adaptive question difficulty and spaced-repetition scheduling.
+- [x] 3.14 Implement privacy-preserving teacher/cohort insights API.
 - [ ] 4.9 Build the minimal teacher/cohort dashboard.
 - [ ] 5.9 Verify adaptive behaviour, evidence quality and cohort privacy.
 
 ## Current checkpoint
-**Completed:** local development foundation, GitHub repository setup and project documentation commit (Phase 0.5).
+**Completed:** Phase 0, Phase 1.1, Phase 2 (full schema, curriculum, concept graph & seed data), and Phase 3 (Cognify ADK tutor agent with all 14 tools, Gemini 3.8 Flash live integration tested & verified).
 
-**Confirmed:** Wispr Flow usage has started. Exact organiser compliance and submission requirements remain to be verified.
+**Confirmed:** Live Google ADK Agent tool execution with Gemini 3.8 Flash working against local PostgreSQL database.
 
-**Next:** verify hackathon requirements (0.6), then complete the MVP brief, learner journey, judge demo script and initial concept graph.
-
-The environment being ready does not mean the Educentriks application is built. Product tasks remain pending until tested.
+**Next:** Phase 4 — Frontend UI (Interactive learner voice/chat coaching experience + teacher dashboard).
