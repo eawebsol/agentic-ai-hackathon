@@ -1,0 +1,21 @@
+services:
+  postgres:
+    image: pgvector/pgvector:0.8.7-pg17
+    container_name: agentic-postgres
+    environment:
+      POSTGRES_USER: agentic
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: agentic_db
+    ports:
+      - "127.0.0.1:5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U agentic -d agentic_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    shm_size: 128mb
+
+volumes:
+  postgres_data:
